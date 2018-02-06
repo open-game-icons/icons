@@ -38,6 +38,7 @@ Each sub-folders in this archive correspond to a different contributor :
 - Caro Asercion
 - SeregaCthtuf
 - Jummit, https://jummit.com
+- freakinhippie, http://www.voidgate.org
 
 Please, include a mention "Icons made by {author}" in your derivative work.
 
