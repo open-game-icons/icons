@@ -41,6 +41,7 @@ Each sub-folders in this archive correspond to a different contributor :
 - freakinhippie, http://www.voidgate.org
 - StaterZ
 - Luiz Bills - CC0
+- adaptive-shield-matrix - CC0
 
 Please, include a mention "Icons made by {author}" in your derivative work.
 
