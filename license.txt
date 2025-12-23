@@ -39,6 +39,7 @@ Each sub-folders in this archive correspond to a different contributor :
 - SeregaCthtuf
 - Jummit, https://jummit.com
 - freakinhippie, http://www.voidgate.org
+- StaterZ
 
 Please, include a mention "Icons made by {author}" in your derivative work.
 
