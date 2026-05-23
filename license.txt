@@ -42,6 +42,7 @@ Each sub-folders in this archive correspond to a different contributor :
 - StaterZ
 - Luiz Bills - CC0
 - adaptive-shield-matrix - CC0
+- Montoli
 
 Please, include a mention "Icons made by {author}" in your derivative work.
 
