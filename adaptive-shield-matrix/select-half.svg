@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-  <path fill="none" stroke="#000" stroke-width="7" stroke-linecap="round" stroke-dashoffset="30" paint-order="fill markers stroke" d="M4.65 4.65h60v60h-60z"/>
-  <path d="M68.65 68.65L79.26 95.3l5.7-5.7 9.24 9.25 4.65-4.65-9.25-9.25 5.7-5.69z" fill-rule="evenodd"/>
-  <path fill-rule="evenodd" paint-order="fill markers stroke" d="M14.65 14.65h17v17h-17zm23 0h17v17h-17z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"><path d="M0 0h512v512H0Z"/><path fill="none" stroke="#000" stroke-dashoffset="30" stroke-linecap="round" stroke-width="31.776" d="M50.138 50.138h272.364v272.364H50.138Z" paint-order="fill markers stroke" style="stroke:#fff;stroke-opacity:1"/><path fill-rule="evenodd" d="m340.66 340.66 48.163 120.975 25.875-25.875 41.944 41.99 21.108-21.108-41.99-41.99 25.875-25.829z" style="fill:#fff;fill-opacity:1;stroke-width:4.53941"/><path fill-rule="evenodd" d="M95.532 95.532h77.17v77.17h-77.17zm104.406 0h77.17v77.17h-77.17z" paint-order="fill markers stroke" style="fill:#fff;fill-opacity:1;stroke-width:4.53941"/></svg>

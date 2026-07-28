@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-  <path fill="none" stroke="#000" stroke-width="7" stroke-linecap="round" stroke-dashoffset="30" paint-order="fill markers stroke" d="M4.65 4.65h60v60h-60z"/>
-  <path d="M68.65 68.65L79.26 95.3l5.7-5.7 9.24 9.25 4.65-4.65-9.25-9.25 5.7-5.69z" fill-rule="evenodd"/>
-  <text style="line-height:114.38965607px;-inkscape-font-specification:Bebas" x="1.72" y="1034.91" font-weight="400" font-size="61.01" font-family="Bebas" letter-spacing="0" word-spacing="0" stroke-width="4.58" transform="translate(14.65 -978.96)">
-    <tspan x="1.72" y="1034.91" style="-inkscape-font-specification:'Liberation Sans Bold'" font-weight="700" font-family="Liberation Sans">?</tspan>
-  </text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"><path d="M0 0h512v512H0Z"/><path fill="none" stroke="#000" stroke-dashoffset="30" stroke-linecap="round" stroke-width="31.776" d="M50.138 50.138h272.364v272.364H50.138Z" paint-order="fill markers stroke" style="stroke:#fff;stroke-opacity:1"/><path fill-rule="evenodd" d="m340.66 340.66 48.163 120.975 25.875-25.875 41.944 41.99 21.108-21.108-41.99-41.99 25.875-25.829z" style="fill:#fff;fill-opacity:1;stroke-width:4.53941"/><text x="103.34" y="283.01" stroke-width="20.791" font-family="Bebas" font-size="276.949" font-weight="400" letter-spacing="0" style="line-height:519.261px;-inkscape-font-specification:Bebas;fill:#fff;fill-opacity:1" word-spacing="0"><tspan x="103.34" y="283.01" font-family="'Liberation Sans'" font-weight="700" style="-inkscape-font-specification:&quot;Liberation Sans Bold&quot;;fill:#fff;fill-opacity:1;stroke-width:20.7905">?</tspan></text></svg>
