@@ -41,7 +41,7 @@
    pagecolor="#838383">
 	</sodipodi:namedview>
 <path
-   d="M -20,0 H 492 V 512 H -20 Z"
+   d="M0 0h512v512H0z"
    fill="#000000"
    fill-opacity="1"
    id="path1-8"
