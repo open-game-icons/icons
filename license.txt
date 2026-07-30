@@ -43,6 +43,16 @@ Each sub-folders in this archive correspond to a different contributor :
 - Luiz Bills - CC0
 - adaptive-shield-matrix - CC0
 - Montoli
+- akaru44
+- blackchakram
+- dandragon
+- Jamster, https://www.deviantart.com/jamster97
+- jmcharter, https://joncharter.co.uk
+- leklo-ono
+- murasame
+- qubodup
+- Ross Esmond, https://rossesmond.com
+- TangentFoxy
 
 Please, include a mention "Icons made by {author}" in your derivative work.
 
