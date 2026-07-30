@@ -1,6 +1,6 @@
 Icons provided under the Creative Commons 3.0 BY or CC0 if mentioned below.
 
-Each sub-folders in this archive correspond to a different contributor :
+Each sub-folders in this archive correspond to a different contributor:
 
 - adaptive-shield-matrix - CC0
 - akaru44
@@ -56,6 +56,4 @@ Each sub-folders in this archive correspond to a different contributor :
 
 Please, include a mention "Icons made by {author}" in your derivative work.
 
-If you use them in one of your project, don't hesitate to drop a message to delapouite@gmail.com or ping @GameIcons on twitter.
-
-More info and icons available at https://game-icons.net
+More info and icons available at https://open-game-icons.net
