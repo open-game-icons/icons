@@ -71,6 +71,13 @@ So it means, that if you want to rasterize the default collection of white on bl
 
 Depending on the power of your machine, the execution of the script may take a while (no parallel executions yet).
 
+### `rebuild_db.sh`
+
+This deletes and rebuilds the SQLite database `icons.db` from the contents of `icons.sql`.
+This is only necessary if you want to run an instance of the website yourself, or if you're a developer interested in querying the database.
+
+Depends on [SQLite](https://sqlite.org/index.html) 3.
+
 ## License
 
 See [license.txt](license.txt).
