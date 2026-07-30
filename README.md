@@ -1,19 +1,44 @@
-# Game Icons
+# Open Game Icons
 
-All SVG icons available on https://game-icons.net
-
-Also, this repository is used to [track](https://github.com/game-icons/icons/issues) requests made on Twitter or by email.
-You can add your own suggestions.
+All SVG icons available on [Open Game Icons](https://open-game-icons.net), forked from [game-icons/icons](https://github.com/game-icons/icons).
 
 ## Contribution
 
-Contributions are welcomed! Have a look at this [document](https://github.com/game-icons/icons/blob/master/CONTRIBUTING.md) for help.
+Contributions are welcomed!
+Have a look at [CONTRIBUTING.md](CONTRIBUTING.md) for guidance.
 
 ## Scripts
 
-A few shell-scripts are at your disposal for various batch tasks.
+This repo includes a few shell scripts for various batch tasks.
 
-### colorize-svgs.sh
+### `optimize-svgs.sh`
+
+Convert the given SVGs into an standard "optimized" format to reduce file size and ensure they work on every platform.
+
+Depends on [Inkscape](https://inkscape.org/) and [SVGO](https://svgo.dev/).
+
+```sh
+# Run on a specific SVG
+./optimize-svg.sh my-icon.svg
+
+# Run on all SVGs
+./optimize-svg.sh **/*.svg
+```
+
+**WARNING**: This will change the structure of your SVG files and may ruin them!
+I suggest committing the original version of your icon to the repo before running this, and/or making a backup copy of it outside the repo first.
+
+This script is a bit hacky, so if you can't this it working for your icon (e.g. if you just end up with a white or black square, or an invalid SVG), don't worry about it.
+Just contribute what you have.
+
+### `check-svgs.sh`
+
+Checks for any unoptimized SVG files.
+Run this before deploying new icons to the website.
+
+Depends on [ripgrep](https://github.com/BurntSushi/ripgrep).
+
+### `colorize-svgs.sh`
 
 By default, all the provided icons in this repository have a white foreground on a black background.
 You may need them in other color combinations.
@@ -31,7 +56,7 @@ the second one for the background color also in hexadecimal or with the special 
 
 The generated SVG files are created in the gitignored `_out` directory.
 
-### rasterize-svgs.sh
+### `rasterize-svgs.sh`
 
 This script walks through the whole content of the `_out` directory and generates an optimized PNG file for every SVG file it encounters.
 So it means, that if you want to rasterize the default collection of white on black icons:
@@ -44,8 +69,8 @@ So it means, that if you want to rasterize the default collection of white on bl
 ./rasterize-svgs.sh
 ```
 
-Depending on the power of your machine, the execution of the script may take a while. (no parallel executions yet).
+Depending on the power of your machine, the execution of the script may take a while (no parallel executions yet).
 
 ## License
 
-CC-BY
+See [license.txt](license.txt).
