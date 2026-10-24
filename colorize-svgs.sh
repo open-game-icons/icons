@@ -24,68 +24,69 @@ BACKGROUND="$DEFAULT_BACKGROUND"
 DIMENSIONS='1x1'
 
 if test -n "$1"; then
-  FOREGROUND="$1"
+	FOREGROUND="$1"
 fi
 if test -n "$2"; then
-  BACKGROUND="$2"
+	BACKGROUND="$2"
 fi
 
 # helper
-begins_with() { case $2 in "$1"*) true;; *) false;; esac; }
+begins_with() {
+	case $2 in "$1"*) true ;; *) false ;; esac
+}
 
 i=0
 for SVG in $(fd --extension svg); do
-  AUTHOR="$(dirname "$SVG")"
+	AUTHOR="$(dirname "$SVG")"
 
-  # ignore SVGs previously generated
-  if test "$AUTHOR" = "$OUT_DIR"; then
-    continue
-  fi
+	# ignore SVGs previously generated
+	if test "$AUTHOR" = "$OUT_DIR"; then
+		continue
+	fi
 
-  if test "$AUTHOR" = badges; then
-    continue
-  fi
+	if test "$AUTHOR" = badges; then
+		continue
+	fi
 
-  # remove hexadecimal prefix
-  FOREGROUND_DIR="$FOREGROUND"
-  if begins_with '#' "$FOREGROUND_DIR"; then
-    FOREGROUND_DIR="$(echo "$FOREGROUND_DIR" | cut -c 2-)"
-  fi
-  BACKGROUND_DIR="$BACKGROUND"
-  if begins_with '#' "$BACKGROUND_DIR"; then
-    BACKGROUND_DIR="$(echo "$BACKGROUND_DIR" | cut -c 2-)"
-  fi
+	# remove hexadecimal prefix
+	FOREGROUND_DIR="$FOREGROUND"
+	if begins_with '#' "$FOREGROUND_DIR"; then
+		FOREGROUND_DIR="$(echo "$FOREGROUND_DIR" | cut -c 2-)"
+	fi
+	BACKGROUND_DIR="$BACKGROUND"
+	if begins_with '#' "$BACKGROUND_DIR"; then
+		BACKGROUND_DIR="$(echo "$BACKGROUND_DIR" | cut -c 2-)"
+	fi
 
-  # ensure 6 digits format
-  if [ "${#FOREGROUND_DIR}" -lt 6 ]; then
-    FOREGROUND_DIR="$FOREGROUND_DIR$FOREGROUND_DIR"
-  fi
-  if [ "${#BACKGROUND_DIR}" -lt 6 ]; then
-    BACKGROUND_DIR="$BACKGROUND_DIR$BACKGROUND_DIR"
-  fi
+	# ensure 6 digits format
+	if [ "${#FOREGROUND_DIR}" -lt 6 ]; then
+		FOREGROUND_DIR="$FOREGROUND_DIR$FOREGROUND_DIR"
+	fi
+	if [ "${#BACKGROUND_DIR}" -lt 6 ]; then
+		BACKGROUND_DIR="$BACKGROUND_DIR$BACKGROUND_DIR"
+	fi
 
-  # this path reflects the one currently on https://game-icons.net
-  # e.g. https://game-icons.net/icons/ffffff/000000/1x1/lorc/glass-heart.svg
-  OUT_DIR="$OUT_ROOT_DIR/$FOREGROUND_DIR/$BACKGROUND_DIR/$DIMENSIONS/$AUTHOR"
-  mkdir -p "$OUT_DIR"
+	# this path reflects the one currently on https://game-icons.net
+	# e.g. https://game-icons.net/icons/ffffff/000000/1x1/lorc/glass-heart.svg
+	OUT_DIR="$OUT_ROOT_DIR/$FOREGROUND_DIR/$BACKGROUND_DIR/$DIMENSIONS/$AUTHOR"
+	mkdir -p "$OUT_DIR"
 
-  OUT_FILE="$OUT_DIR/$(basename "$SVG")"
-  cp "$SVG" "$OUT_FILE"
+	OUT_FILE="$OUT_DIR/$(basename "$SVG")"
+	cp "$SVG" "$OUT_FILE"
 
-  if test "$FOREGROUND" != "$DEFAULT_FOREGROUND"; then
-    sed -i "s/fill=\"$DEFAULT_FOREGROUND\"/fill=\"$FOREGROUND\"/g" "$OUT_FILE"
-  fi
+	if test "$FOREGROUND" != "$DEFAULT_FOREGROUND"; then
+		sed -i "s/fill=\"$DEFAULT_FOREGROUND\"/fill=\"$FOREGROUND\"/g" "$OUT_FILE"
+	fi
 
-  if test "$BACKGROUND" != "$DEFAULT_BACKGROUND"; then
-    # remove the square entirely
-    if test "$BACKGROUND" = transparent; then
-      sed -i "s/<path d=\"M0 0h512v512H0z\"\/>//g" "$OUT_FILE"
-    else
-      sed -i "s/<path d=\"M0 0h512v512H0z\"\/>/<path fill=\"$BACKGROUND\" d=\"M0 0h512v512H0z\"\/>/g" "$OUT_FILE"
-    fi
-  fi
+	if test "$BACKGROUND" != "$DEFAULT_BACKGROUND"; then
+		# remove the square entirely
+		if test "$BACKGROUND" = transparent; then
+			sed -i "s/<path d=\"M0 0h512v512H0z\"\/>//g" "$OUT_FILE"
+		else
+			sed -i "s/<path d=\"M0 0h512v512H0z\"\/>/<path fill=\"$BACKGROUND\" d=\"M0 0h512v512H0z\"\/>/g" "$OUT_FILE"
+		fi
+	fi
 
-  i=$((i+1))
-  echo "$i $OUT_FILE"
+	i=$((i + 1))
+	echo "$i $OUT_FILE"
 done
-

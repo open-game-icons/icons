@@ -12,18 +12,18 @@
 OUT_ROOT_DIR='_out'
 
 if test ! -d "$OUT_ROOT_DIR"; then
-  echo "directory '$OUT_ROOT_DIR' does not exist"
-  echo "run ./colorize-svgs.sh to create it and populate its content with colorized (or default) SVG files"
-  exit 1
+	echo "directory '$OUT_ROOT_DIR' does not exist"
+	echo "run ./colorize-svgs.sh to create it and populate its content with colorized (or default) SVG files"
+	exit 1
 fi
 
 i=0
 for SVG in $(fd . "$OUT_ROOT_DIR" --extension svg); do
-  PNG="$(dirname "$SVG")/$(basename "$SVG" .svg).png"
-  if test ! -f "$PNG"; then
-    i=$((i+1))
-    echo "$i $PNG"
-    resvg "$SVG" "$PNG"
-    oxipng --opt 4 --interlace 1 --strip safe "$PNG"
-  fi
+	PNG="$(dirname "$SVG")/$(basename "$SVG" .svg).png"
+	if test ! -f "$PNG"; then
+		i=$((i + 1))
+		echo "$i $PNG"
+		resvg "$SVG" "$PNG"
+		oxipng --opt 4 --interlace 1 --strip safe "$PNG"
+	fi
 done

@@ -2,7 +2,7 @@
 
 # Check for any unoptimized SVG files
 
-if ! command -v rg > /dev/null 2>&1; then
+if ! command -v rg >/dev/null 2>&1; then
 	echo 'command not found: rg' >&2
 	echo 'ensure ripgrep is installed and available on your PATH' >&2
 	exit 1

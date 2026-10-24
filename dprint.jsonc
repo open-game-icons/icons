@@ -1,0 +1,16 @@
+{
+  "shebangs": {
+    "#!/bin/sh": "sh",
+    "#!/bin/bash": "bash",
+  },
+  "excludes": [
+    "*.svg",
+  ],
+  // https://dprint.dev/plugins/
+  "plugins": [
+    "npm:@dprint/json@0.25.2", // includes JSONC
+    "npm:@dprint/typescript@0.96.1", // includes JavaScript
+    "npm:@dprint/markdown@0.26.0",
+    "npm:@kachick/dprint-plugin-sh@0.1.2",
+  ]
+}
