@@ -37,7 +37,7 @@ File names must:
 - Be in lowercase
 - Use a hyphen to separate words (no spaces or underscores)
 - Be in English
-- No weird Unicode characters (symbols, accent marks, etc.)
+- Not have any weird Unicode characters (symbols, accent marks, etc.)
 
 Bad:
 
