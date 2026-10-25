@@ -35,4 +35,4 @@ else
 	status=1
 fi
 
-return $status
+exit $status
