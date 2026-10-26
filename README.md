@@ -10,8 +10,9 @@ Have a look at [CONTRIBUTING.md](CONTRIBUTING.md) for guidance.
 ## Scripts
 
 This repo includes a few shell scripts for various batch tasks.
+`*.fish` scripts require the [fish](https://fishshell.com/) shell.
 
-### `optimize-svgs.sh`
+### `optimize-svgs.fish`
 
 Convert the given SVGs into an standard "optimized" format to reduce file size and ensure they work on every platform.
 
@@ -31,7 +32,7 @@ I suggest committing the original version of your icon to the repo before runnin
 This script is a bit hacky, so if you can't this it working for your icon (e.g. if you just end up with a white or black square, or an invalid SVG), don't worry about it.
 Just contribute what you have.
 
-### `check-svgs.sh`
+### `check-svgs.fish`
 
 Checks for any unoptimized SVG files.
 Run this before deploying new icons to the website.
@@ -71,7 +72,7 @@ So it means, that if you want to rasterize the default collection of white on bl
 
 Depending on the power of your machine, the execution of the script may take a while (no parallel executions yet).
 
-### `rebuild_db.sh`
+### `rebuild_db.fish`
 
 This deletes and rebuilds the SQLite database `icons.db` from the contents of `icons.sql`.
 This is only necessary if you want to run an instance of the website yourself, or if you're a developer interested in querying the database.
