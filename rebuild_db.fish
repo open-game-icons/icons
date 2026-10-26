@@ -1,2 +1,4 @@
 #!/usr/bin/env fish
-rm -f icons.db && sqlite3 icons.db <icons.sql
+set db (status dirname)/icons.db
+set dump (status dirname)/icons.sql
+rm -f $db; and sqlite3 $db <$dump
