@@ -2,7 +2,7 @@
 
 # Convert strokes to paths and ungroup objects (hard-coded to 3 groups deep)
 for f in $argv
-	echo 'file-open:'$f';
+    echo 'file-open:'$f';
 select-all:all; object-stroke-to-path;
 select-all:all; selection-ungroup;
 select-all:all; selection-ungroup;
@@ -21,7 +21,7 @@ sd '<path\\b[^/]*\\bd="M(0|512) (0|512)([hvHV](0|512)){3}[zZ]"[^/]*/>| xml:space
 
 # Union all paths
 for f in $argv
-	echo 'file-open:'$f';
+    echo 'file-open:'$f';
 select-all:all; path-union;
 export-filename:'$f';
 export-do;
