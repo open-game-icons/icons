@@ -8,7 +8,7 @@ if ! command -v rg >/dev/null 2>&1
     exit 1
 end
 
-set status 0
+set success 0
 
 # For all icons, check:
 # - Icon size is 512x512
@@ -19,7 +19,7 @@ set icon_regex '^<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><
 if ! rg --invert-match --files-with-matches $icon_regex -- **/*.svg | rg --invert-match badges/
     echo 'All icons are optimized' >&2
 else
-    set status 1
+    set success 1
 end
 
 # For all badges, check:
@@ -32,7 +32,7 @@ set badge_regex '^<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
 if ! rg --invert-match --files-with-matches $badge_regex badges/*.svg | rg --invert-match blank
     echo 'All badges are optimized' >&2
 else
-    set status 1
+    set success 1
 end
 
-exit $status
+exit $success
