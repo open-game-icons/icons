@@ -15,7 +15,7 @@ set success 0
 # - Icon has exactly one white foreground path
 # - No superfluous attributes are present
 set icon_regex '^<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 0h512v512H0z"/><path fill="#fff" d="[^"]*"/></svg>$'
-if not rg --invert-match --files-with-matches $icon_regex -- **/*.svg | rg --invert-match badges/
+if not rg --invert-match --files-with-matches $icon_regex -- (status dirname)/**/*.svg | rg --invert-match badges/
     echo 'All icons are optimized' >&2
 else
     set success 1
@@ -28,7 +28,7 @@ end
 # - Badge has exactly one white foreground path
 # - No superfluous attributes are present
 set badge_regex '^<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><circle cx="128" cy="128" r="128"/><circle stroke="#fff" stroke-width="18" cx="128" cy="128" r="101"/><path fill="#fff" d="[^"]*"/></svg>$'
-if not rg --invert-match --files-with-matches $badge_regex badges/*.svg | rg --invert-match blank
+if not rg --invert-match --files-with-matches $badge_regex (status dirname)/badges/*.svg | rg --invert-match blank
     echo 'All badges are optimized' >&2
 else
     set success 1
